@@ -72,9 +72,17 @@ GET https://labs.nicolas.sh/reactnative/evmod/api/
 
 Les résultats varient à chaque appel ; ajouter `?fixed=true` pour les figer.
 
+## Tests
+
+Tests unitaires et de composants avec Jest :
+
+```sh
+npm test
+```
+
+Couverture actuelle : formatage du temps, client API (succès / erreur), rendu des
+statistiques et de l'écran Profil.
+
 ## État du projet
 
 ⚠️ **Projet en cours — pas encore complet.**
-
-- Les **tests ne sont pas encore implémentés** (la configuration Jest par défaut du
-  template est présente, mais aucun test applicatif n'a été écrit).
