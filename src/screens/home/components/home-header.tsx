@@ -12,6 +12,8 @@ export const HomeHeader = () => (
       name="person-circle-outline"
       size={34}
       color={palette.green.accent}
+      accessibilityElementsHidden
+      importantForAccessibility="no"
     />
   </View>
 );

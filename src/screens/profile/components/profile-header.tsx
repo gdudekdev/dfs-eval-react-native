@@ -8,7 +8,13 @@ export const ProfileHeader = () => (
       <Text style={styles.title}>Goals</Text>
       <Text style={styles.subtitle}>Mon profil</Text>
     </View>
-    <Ionicons name="settings-outline" size={26} color={palette.green.accent} />
+    <Ionicons
+      name="settings-outline"
+      size={26}
+      color={palette.green.accent}
+      accessibilityElementsHidden
+      importantForAccessibility="no"
+    />
   </View>
 );
 

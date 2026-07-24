@@ -8,12 +8,18 @@ export const ErrorState = ({onRetry}: {onRetry: () => void}) => (
       name="cloud-off-outline"
       size={52}
       color={colors.textMuted}
+      accessibilityElementsHidden
+      importantForAccessibility="no"
     />
     <Text style={styles.title}>
       Impossible de récupérer vos données sportives.
     </Text>
     <Text style={styles.message}>Vérifiez votre connexion et réessayez.</Text>
-    <TouchableOpacity style={styles.button} onPress={onRetry}>
+    <TouchableOpacity
+      style={styles.button}
+      onPress={onRetry}
+      accessibilityRole="button"
+      accessibilityLabel="Réessayer">
       <Text style={styles.buttonText}>Réessayer</Text>
     </TouchableOpacity>
   </View>

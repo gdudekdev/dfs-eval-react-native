@@ -9,7 +9,7 @@ type InfoRowProps = {
 };
 
 export const InfoRow = ({icon, label, value}: InfoRowProps) => (
-  <View style={styles.row}>
+  <View style={styles.row} accessible accessibilityLabel={`${label} : ${value}`}>
     <IconBadge name={icon} color={palette.green.accent} background={palette.green.tint} />
     <View style={styles.texts}>
       <Text style={styles.label}>{label}</Text>

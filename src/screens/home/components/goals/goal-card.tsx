@@ -11,7 +11,7 @@ type GoalCardProps = {
 };
 
 export const GoalCard = ({title, target, icon, color}: GoalCardProps) => (
-  <View style={styles.card}>
+  <View style={styles.card} accessible accessibilityLabel={`${title}, ${target}`}>
     <IconBadge name={icon} color={color.accent} background={color.tint} />
     <View style={styles.texts}>
       <Text style={styles.title}>{title}</Text>

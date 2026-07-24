@@ -7,7 +7,13 @@ import {Profile} from '../data';
 export const ProfileCard = ({profile}: {profile: Profile}) => (
   <View style={styles.card}>
     <View style={styles.avatar}>
-      <Ionicons name="person" size={40} color={palette.green.accent} />
+      <Ionicons
+        name="person"
+        size={40}
+        color={palette.green.accent}
+        accessibilityElementsHidden
+        importantForAccessibility="no"
+      />
     </View>
     <View style={styles.info}>
       <Text style={styles.name}>{profile.name}</Text>

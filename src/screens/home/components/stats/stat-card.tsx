@@ -11,7 +11,10 @@ type StatCardProps = {
 };
 
 export const StatCard = ({icon, value, unit, caption, color}: StatCardProps) => (
-  <View style={styles.card}>
+  <View
+    style={styles.card}
+    accessible
+    accessibilityLabel={`${value} ${unit}, ${caption}`}>
     <IconBadge name={icon} color={color.accent} background={color.tint} />
     <Text style={[styles.value, {color: color.accent}]}>{value}</Text>
     <Text style={styles.unit}>{unit}</Text>
