@@ -6,7 +6,7 @@ import {GoalCard} from './goal-card';
 
 //TODO recup les icons/colors pour les objectifs (rester coheremt )
 const GOAL_STYLES = [
-  {icon: 'target', color: palette.green},
+  {icon: 'bullseye-arrow', color: palette.green},
   {icon: 'run-fast', color: palette.orange},
   {icon: 'scale-bathroom', color: palette.blue},
   {icon: 'trophy-outline', color: palette.green},
