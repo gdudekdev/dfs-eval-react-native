@@ -1,6 +1,6 @@
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {colors, spacing} from '../../theme';
+import {colors, layout, spacing} from '../../theme';
 import {
   ErrorState,
   GoalsSection,
@@ -22,9 +22,11 @@ export const HomeScreen = () => {
           <ScrollView
             contentContainerStyle={styles.content}
             showsVerticalScrollIndicator={false}>
-            <HomeHeader />
-            <StatsSection stats={data.stats} />
-            <GoalsSection goals={data.goals} />
+            <View style={styles.inner}>
+              <HomeHeader />
+              <StatsSection stats={data.stats} />
+              <GoalsSection goals={data.goals} />
+            </View>
           </ScrollView>
         )}
       </View>
@@ -41,6 +43,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
+    flexGrow: 1,
+  },
+  inner: {
+    width: '100%',
+    maxWidth: layout.maxContentWidth,
+    alignSelf: 'center',
     padding: spacing.lg,
   },
 });

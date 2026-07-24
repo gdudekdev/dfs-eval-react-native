@@ -28,3 +28,7 @@ export const radius = {
   md: 16,
   lg: 20,
 };
+
+export const layout = {
+  maxContentWidth: 560,
+};

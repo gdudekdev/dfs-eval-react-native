@@ -16,7 +16,12 @@ export const StatCard = ({icon, value, unit, caption, color}: StatCardProps) => 
     accessible
     accessibilityLabel={`${value} ${unit}, ${caption}`}>
     <IconBadge name={icon} color={color.accent} background={color.tint} />
-    <Text style={[styles.value, {color: color.accent}]}>{value}</Text>
+    <Text
+      style={[styles.value, {color: color.accent}]}
+      numberOfLines={1}
+      adjustsFontSizeToFit>
+      {value}
+    </Text>
     <Text style={styles.unit}>{unit}</Text>
     <Text style={styles.caption}>{caption}</Text>
   </View>

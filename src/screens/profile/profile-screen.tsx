@@ -1,6 +1,6 @@
-import {ScrollView, StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {colors, spacing} from '../../theme';
+import {colors, layout, spacing} from '../../theme';
 import {
   InfoItem,
   InfoList,
@@ -31,10 +31,12 @@ export const ProfileScreen = () => {
       <ScrollView
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}>
-        <ProfileHeader />
-        <ProfileCard profile={PROFILE} />
-        <InfoList items={infos} />
-        <MotivationCard />
+        <View style={styles.inner}>
+          <ProfileHeader />
+          <ProfileCard profile={PROFILE} />
+          <InfoList items={infos} />
+          <MotivationCard />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -46,6 +48,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.screen,
   },
   content: {
+    flexGrow: 1,
+  },
+  inner: {
+    width: '100%',
+    maxWidth: layout.maxContentWidth,
+    alignSelf: 'center',
     padding: spacing.lg,
   },
 });
