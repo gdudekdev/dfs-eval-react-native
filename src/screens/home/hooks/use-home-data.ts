@@ -14,7 +14,8 @@ export const useHomeData = () => {
       const dashboard = await fetchDashboard();
       setData(dashboard);
       setStatus('success');
-    } catch {
+    } catch (error) {
+      console.warn('Échec du chargement des données', error);
       setStatus('error');
     }
   }, []);
@@ -25,7 +26,8 @@ export const useHomeData = () => {
       const dashboard = await fetchDashboard();
       setData(dashboard);
       setStatus('success');
-    } catch {
+    } catch (error) {
+      console.warn('Échec du rafraîchissement des données', error);
     } finally {
       setRefreshing(false);
     }
